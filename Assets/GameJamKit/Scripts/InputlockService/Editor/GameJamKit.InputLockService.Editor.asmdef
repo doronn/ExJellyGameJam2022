@@ -1,0 +1,5 @@
+﻿{
+  "name": "GameJamKit.InputLockService.Editor",
+  "includePlatforms": ["Editor"],
+  "references": ["GUID:076effb9ef124fc7b443091dd14ac74e"]
+}

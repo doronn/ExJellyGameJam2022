@@ -1,0 +1,16 @@
+{
+    "name": "GameJamKit.Utils.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:5b5ba6ebbe8db5c4f937c749e88224e9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
