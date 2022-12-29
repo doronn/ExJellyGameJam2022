@@ -1,13 +1,20 @@
-﻿using Scripts.Player.Platformer;
+﻿using PathOfTheMachine.Scripts.Player.Factories;
+using Scripts.Player.Platformer;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Zenject;
 
 namespace PathOfTheMachine.Scripts.Player.PlayerInputSubscribers
 {
     public class PlayerInputListenerForPlayerController : MonoBehaviour
     {
-        [SerializeField]
-        private PlayerController _playerController;
+        private IPlayerController _playerController;
+
+        [Inject]
+        private void Inject(IPlayerControllerFactory playerControllerFactory)
+        {
+            _playerController = playerControllerFactory.Create(0);
+        }
 
         public void Jump(InputAction.CallbackContext context)
         {

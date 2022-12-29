@@ -1,4 +1,4 @@
 ﻿{
   "name": "PlayerController.PlayerInput",
-  "references": ["GUID:0524f2149cdb41278f7694f6bdba778a", "GUID:75469ad4d38634e559750d17036d5f7c", "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"]
+  "references": ["GUID:0524f2149cdb41278f7694f6bdba778a", "GUID:75469ad4d38634e559750d17036d5f7c", "GUID:0d8beb7f090555447a6cf5ce9e54dbb4", "GUID:78f3142f08a743c2b44fe56bc8ff74d1"]
 }

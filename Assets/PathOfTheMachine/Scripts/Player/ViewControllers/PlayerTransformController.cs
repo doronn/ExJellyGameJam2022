@@ -1,8 +1,9 @@
-﻿using Scripts.Player.Platformer;
+﻿using PathOfTheMachine.Scripts.Player.Factories;
+using Scripts.Player.Platformer;
 using UnityEngine;
 using Zenject;
 
-namespace PathOfTheMachine.Scripts.Player
+namespace PathOfTheMachine.Scripts.Player.ViewControllers
 {
     public class PlayerTransformController : MonoBehaviour
     {
@@ -10,14 +11,17 @@ namespace PathOfTheMachine.Scripts.Player
         private Transform _playerTransform;
 
         [SerializeField]
+        private int _id = 0; 
+
+        [SerializeField]
         private float _movementInterpolationSpeed;
 
         private IReadPlayerValues _readPlayerValues;
 
         [Inject]
-        public void Inject(IReadPlayerValues readPlayerValues)
+        public void Inject(IReadPlayerValuesFactory readPlayerValuesFactory)
         {
-            _readPlayerValues = readPlayerValues;
+            _readPlayerValues = readPlayerValuesFactory.Create(_id == 0 ? 0 : gameObject.GetInstanceID());
         }
 
         private void Update()
