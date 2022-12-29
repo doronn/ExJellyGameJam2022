@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿using Scripts.Player.Platformer;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace PathOfTheMachine.Scripts.PlayerController.PlayerInputSubscribers
+namespace PathOfTheMachine.Scripts.Player.PlayerInputSubscribers
 {
     public class PlayerInputListenerForPlayerController : MonoBehaviour
     {
         [SerializeField]
-        private global::Scripts.PlayerController.Platformer.PlayerController _playerController;
+        private PlayerController _playerController;
 
         public void Jump(InputAction.CallbackContext context)
         {
