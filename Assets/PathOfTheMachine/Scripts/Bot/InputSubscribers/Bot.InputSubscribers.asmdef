@@ -1,4 +1,8 @@
 ﻿{
   "name": "Bot.InputSubscribers",
-  "references": ["GUID:0524f2149cdb41278f7694f6bdba778a","GUID:78f3142f08a743c2b44fe56bc8ff74d1"]
+  "references": [
+    "GUID:0524f2149cdb41278f7694f6bdba778a",
+    "GUID:78f3142f08a743c2b44fe56bc8ff74d1",
+    "GUID:61f5c5ee1081487b8cbb2c6992dfefa0"
+  ]
 }

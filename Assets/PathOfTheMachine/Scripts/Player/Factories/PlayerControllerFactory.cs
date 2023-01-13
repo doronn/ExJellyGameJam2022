@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using PathOfTheMachine.Scripts.GameWorld;
 using Scripts.Player.Platformer;
 using UnityEngine;
 using Zenject;
@@ -10,13 +12,28 @@ namespace PathOfTheMachine.Scripts.Player.Factories
         private readonly DiContainer _container;
         private readonly PlayerProperties _playerProperties;
         private readonly Dictionary<int, PlayerController> _playerControllerCache;
+        private readonly Vector2 _playerStartPosition;
+        private readonly Vector2 _botStartPosition;
 
+        [Inject(Id = "parent")]
+        private Transform _playerParent;
+        
         [Inject]
-        public PlayerControllerFactory(DiContainer container, PlayerProperties playerProperties)
+        public PlayerControllerFactory(DiContainer container, PlayerProperties playerProperties, WorldConfiguration worldConfiguration)
         {
             _container = container;
             _playerProperties = playerProperties;
             _playerControllerCache = new Dictionary<int, PlayerController>();
+            var locations = worldConfiguration.StartLocations.ToList();
+            var nextLocationIndex = Random.Range(0, locations.Count);
+            _playerStartPosition = locations[nextLocationIndex];
+            locations.RemoveAt(nextLocationIndex);
+
+            if (locations.Count > 0)
+            {
+                nextLocationIndex = Random.Range(0, locations.Count);
+                _botStartPosition = locations[nextLocationIndex];
+            }
         }
 
         IPlayerController IPlayerControllerFactory.Create(int id)
@@ -39,7 +56,8 @@ namespace PathOfTheMachine.Scripts.Player.Factories
             {
                 // Create and return a new instance of PlayerController
                 var playerController = new GameObject($"PlayerController {id}").AddComponent<PlayerController>();
-                playerController.Inject(_playerProperties);
+                // playerController.transform.SetParent(_playerParent);
+                playerController.Inject(_playerProperties, id, id == 0 ? _playerStartPosition : _botStartPosition);
                 _playerControllerCache[id] = playerController;
                 return playerController;
             }

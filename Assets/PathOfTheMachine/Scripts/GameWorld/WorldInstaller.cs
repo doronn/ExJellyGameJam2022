@@ -1,5 +1,4 @@
-﻿using GameJamKit.Scripts.Utils.Attributes;
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
 namespace PathOfTheMachine.Scripts.GameWorld
@@ -8,23 +7,30 @@ namespace PathOfTheMachine.Scripts.GameWorld
     {
         [SerializeField]
         private WorldConfiguration _worldConfiguration;
+
+        [SerializeField]
+        private Transform _worldParent;
         
-        private WorldLoader _worldLoader;
+        private EndlessJumperWorldLoader _worldLoader;
+        // private WorldLoader _worldLoader;
         
         public override void InstallBindings()
         {
             Container.Bind<WorldConfiguration>().FromInstance(_worldConfiguration).AsSingle().NonLazy();
-            Container.Bind<WorldLoader>().AsSingle().NonLazy();
+            // Container.Bind<WorldLoader>().AsSingle().NonLazy();
+            Container.Bind<EndlessJumperWorldLoader>().AsSingle().NonLazy();
+            
+            
         }
 
-        [Button]
-        public void TestWorldLoad()
+        public override void Start()
         {
             if (_worldLoader == null)
             {
-                _worldLoader = Container.Instantiate<WorldLoader>();
+                _worldLoader = Container.Instantiate<EndlessJumperWorldLoader>();
+                // _worldLoader = Container.Instantiate<WorldLoader>();
             }
-            _worldLoader.InitWorld();
+            _worldLoader.InitWorld(_worldParent);
         }
     }
 }

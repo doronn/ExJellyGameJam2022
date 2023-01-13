@@ -16,6 +16,9 @@ namespace PathOfTheMachine.Scripts.Player.ViewControllers
         [SerializeField]
         private float _movementInterpolationSpeed;
 
+        [SerializeField]
+        private Vector3 _positionOffset = Vector3.zero;
+
         private IReadPlayerValues _readPlayerValues;
 
         [Inject]
@@ -26,9 +29,9 @@ namespace PathOfTheMachine.Scripts.Player.ViewControllers
 
         private void Update()
         {
-            var currentTransformPosition = _playerTransform.localPosition;
-            currentTransformPosition = Vector3.Lerp(currentTransformPosition, _readPlayerValues.CurrentPlayerLocalPosition, _movementInterpolationSpeed * Time.deltaTime);
-            _playerTransform.localPosition = currentTransformPosition;
+            // var currentTransformPosition = _playerTransform.localPosition;
+            // currentTransformPosition = Vector3.Lerp(currentTransformPosition, _readPlayerValues.CurrentPlayerLocalPosition + _positionOffset, _movementInterpolationSpeed * Time.deltaTime);
+            _playerTransform.position = _readPlayerValues.CurrentPlayerLocalPosition + _positionOffset;
         }
     }
 }

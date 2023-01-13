@@ -10,12 +10,15 @@ namespace PathOfTheMachine.Scripts.Player.Installers
     {
         [SerializeField]
         private PlayerProperties _playerProperties;
+        [SerializeField]
+        private Transform _playerParent;
         
         public override void InstallBindings()
         {
             SignalBusInstaller.Install(Container);
             Container.DeclareSignal<GameStartSignal>();
             Container.BindInstance(_playerProperties).AsSingle().NonLazy();
+            Container.BindInstance(_playerParent).WithId("parent").AsSingle().NonLazy();
             // Container.BindInterfacesTo<PlayerController>().AsTransient();
             Container.BindInterfacesTo<PlayerControllerFactory>().AsCached().NonLazy();
             // Container.Bind<IPlayerControllerFactory>().To<PlayerControllerFactory>().AsCached().NonLazy();

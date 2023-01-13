@@ -21,6 +21,6 @@ namespace PathOfTheMachine.Scripts.GameWorld
         public GameObject BotPrefab { get; private set; }
         
         [field: SerializeField]
-        public Vector2 BotStartLocation { get; private set; }
+        public Vector2[] StartLocations { get; private set; }
     }
 }
