@@ -1,0 +1,5 @@
+﻿{
+  "name": "AiBrainEditor",
+  "includePlatforms": ["Editor"],
+  "references": ["AiBrain"]
+}

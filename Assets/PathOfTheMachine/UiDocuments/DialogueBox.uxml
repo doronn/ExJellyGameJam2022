@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement class="total-window">
+        <ui:VisualElement class="title-container" />
+        <ui:VisualElement class="separator" />
+        <ui:VisualElement class="content-container" />
+        <ui:VisualElement class="spacer" />
+        <ui:VisualElement class="buttons-container" />
+    </ui:VisualElement>
+    <ui:GroupBox style="align-items: center; justify-content: center; flex-direction: row; left: auto; position: relative; flex-basis: 50%; width: 100%; height: 50%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; top: 50%; margin-top: 0;">
+        <ui:Label text="Link your Unity project" name="BotText" class="service-activation-title" style="height: 100%; -unity-text-align: middle-center; white-space: normal; width: 50%; flex-wrap: wrap; justify-content: flex-start; align-items: center;" />
+        <ui:GroupBox style="height: 100%; width: 50%; align-items: center; justify-content: center; flex-direction: column; flex-wrap: wrap;">
+            <ui:Button text="Project Settings" class="confirmation-button" style="-unity-text-align: middle-center; width: 100%; margin-left: 0; margin-right: 0; align-items: center; justify-content: flex-end;" />
+            <ui:Button text="Project Settings" class="confirmation-button" style="-unity-text-align: middle-center; width: 100%; margin-left: 0; margin-right: 0; align-items: center; justify-content: flex-end;" />
+            <ui:Button text="Project Settings" class="confirmation-button" style="-unity-text-align: middle-center; width: 100%; margin-left: 0; margin-right: 0; align-items: center; justify-content: flex-end;" />
+        </ui:GroupBox>
+    </ui:GroupBox>
+</ui:UXML>

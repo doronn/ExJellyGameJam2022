@@ -19,8 +19,10 @@ namespace EndlessJumper.Scripts.Tower.Installers
         
         public override void InstallBindings()
         {
-            Container.BindInstance(_levelsSettings).AsSingle().NonLazy();
-            Container.BindInstance(_floorSettings).AsSingle().NonLazy();
+            var levelSettings = Instantiate(_levelsSettings);
+            var floorSettings = Instantiate(_floorSettings);
+            Container.BindInstance(levelSettings).AsSingle().NonLazy();
+            Container.BindInstance(floorSettings).AsSingle().NonLazy();
             Container.BindInterfacesTo<ObjectPoolFactory>().FromInstance(_objectPoolFactory).AsSingle().NonLazy();
             Container.BindInterfacesTo<PoolableObjectFactory>().AsSingle().NonLazy();
             Container.BindInterfacesTo<LevelSegmentControllerFactory>().AsSingle().NonLazy();

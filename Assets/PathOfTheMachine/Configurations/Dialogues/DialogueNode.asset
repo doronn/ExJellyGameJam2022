@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9037059284945294112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bc88108847421baf3e4264dd3a16a2, type: 3}
+  m_Name: Sub_dialog_1
+  m_EditorClassIdentifier: 
+  _dialogueNodeText: 'Yeah, I''m fine as well.
+
+    just a little bummed...'
+  _dialogueTree:
+  - _dialogueOption: Why so?
+    _dialogueNode: {fileID: 4905990906635894830}
+--- !u!114 &-8271749833697613484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bc88108847421baf3e4264dd3a16a2, type: 3}
+  m_Name: Sub_dialog_1
+  m_EditorClassIdentifier: 
+  _dialogueNodeText: 
+  _dialogueTree: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bc88108847421baf3e4264dd3a16a2, type: 3}
+  m_Name: DialogueNode
+  m_EditorClassIdentifier: 
+  _dialogueNodeText: Hey there, What's up?
+  _dialogueTree:
+  - _dialogueOption: Not bad, and you?
+    _dialogueNode: {fileID: -9037059284945294112}
+--- !u!114 &4905990906635894830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53bc88108847421baf3e4264dd3a16a2, type: 3}
+  m_Name: Sub_dialog_1
+  m_EditorClassIdentifier: 
+  _dialogueNodeText: Well... I was working on this shitty Game Jam when suddenly
+    on the last day, I figured I have nothing to submit for it.
+  _dialogueTree:
+  - _dialogueOption: Damn.. Tough.
+    _dialogueNode: {fileID: -8271749833697613484}

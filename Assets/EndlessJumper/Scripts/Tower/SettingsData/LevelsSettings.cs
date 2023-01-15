@@ -10,5 +10,11 @@ namespace EndlessJumper.Scripts.Tower.SettingsData
         [field: SerializeField] public int LevelSegmentsCount { get; private set; }
         [field: SerializeField] public float LevelSegmentsHeight { get; private set; }
         [field: SerializeField] public float VerticalMovementSpeed { get; private set; }
+        [field: SerializeField] public float MaximumVerticalMovementSpeed { get; private set; }
+        [field: SerializeField] public AnimationCurve SpeedupAmountPerSecond { get; private set; }
+        
+        [field: SerializeField] public float DeathYValue { get; private set; }
+        [field: SerializeField] public float CatchupYValue { get; private set; }
+
     }
 }

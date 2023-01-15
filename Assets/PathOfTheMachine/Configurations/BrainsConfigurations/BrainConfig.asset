@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa91eb89ecbb46d8a522f0e8c296270d, type: 3}
+  m_Name: BrainConfig
+  m_EditorClassIdentifier: 
+  <BrainId>k__BackingField: Brain14
+  <AutoLearn>k__BackingField: 1
+  <IterationTime>k__BackingField: 15
+  <AmountOfSavedNetworks>k__BackingField: 2
+  <MutationAmount>k__BackingField: 0.05

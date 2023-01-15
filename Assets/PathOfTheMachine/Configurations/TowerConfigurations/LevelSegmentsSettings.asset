@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01712f1389694fc4847a4f71b3568681, type: 3}
+  m_Name: LevelSegmentsSettings
+  m_EditorClassIdentifier: 
+  <FloorsInSegment>k__BackingField: 15
+  <LevelSegmentsCount>k__BackingField: 3
+  <LevelSegmentsHeight>k__BackingField: 50
+  <VerticalMovementSpeed>k__BackingField: 0
+  <MaximumVerticalMovementSpeed>k__BackingField: 50
+  <SpeedupAmountPerSecond>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.6
+      inSlope: 4.188064
+      outSlope: 4.188064
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.020725386
+    - serializedVersion: 3
+      time: 0.15
+      value: 0.2
+      inSlope: 1.5771251
+      outSlope: 1.5771251
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.059967536
+    - serializedVersion: 3
+      time: 0.4
+      value: 0.4
+      inSlope: 1.6348125
+      outSlope: 1.6348125
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.032815088
+    - serializedVersion: 3
+      time: 1
+      value: 0.4
+      inSlope: 1.6629068
+      outSlope: 1.6629068
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.044041574
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <DeathYValue>k__BackingField: -30
+  <CatchupYValue>k__BackingField: 15

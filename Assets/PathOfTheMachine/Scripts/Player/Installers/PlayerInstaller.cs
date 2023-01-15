@@ -17,7 +17,8 @@ namespace PathOfTheMachine.Scripts.Player.Installers
         {
             SignalBusInstaller.Install(Container);
             Container.DeclareSignal<GameStartSignal>();
-            Container.BindInstance(_playerProperties).AsSingle().NonLazy();
+            var playerProperties = Instantiate(_playerProperties);
+            Container.BindInstance(playerProperties).AsSingle().NonLazy();
             Container.BindInstance(_playerParent).WithId("parent").AsSingle().NonLazy();
             // Container.BindInterfacesTo<PlayerController>().AsTransient();
             Container.BindInterfacesTo<PlayerControllerFactory>().AsCached().NonLazy();
